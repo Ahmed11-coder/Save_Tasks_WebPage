@@ -1,0 +1,138 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2e9e4;
+    font-family: "Roboto";
+    margin: 0;
+}
+
+form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(145deg, #eee, #f2e9e4);
+    border-left: 2px solid #ffffff60;
+    border-top: 2px solid #ffffff60;
+    width: 400px;
+    max-width: 90%;
+    padding: 40px;
+    border-radius: 10px;
+    height: fit-content;
+    font-weight: 600;
+    box-shadow: 20px 20px 60px #c9ada7, -20px -20px 60px white;
+}
+@keyframes apper {
+    50% {
+        width: 80%;
+    }
+    100% {
+    }
+}
+form .tasks_in {
+    display: flex;
+    align-items : center;
+    gap: 5px;
+    position: relative;
+}
+form .task {
+    width: 100%;
+    background-color: #12121244;
+    position: relative;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: 1px solid black;
+    font-weight: 500;
+    color: #9a8c98;
+    transition: 0.3s;
+}
+form .task:focus {
+    border-color: transparent;
+    background-color: #4a4e69;
+    box-shadow: 10px 10px 20px #9a8c98;
+}
+form .task::placeholder {
+    color: transparent;
+    transition: 0.5s;
+}
+form .task:focus::placeholder {
+    color: #9a8c98;
+}
+form .add {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 10px;
+    border: none;
+    color: #22223b;
+    background-color: #f2e9e4;
+    transition: 0.3s;
+    font-weight: 600;
+    border-radius: 100%;
+    cursor: pointer;
+}
+form .add:hover {
+    background-color: #c9ada7;
+}
+form .results > div {
+    display: flex;
+    width: 95%;
+    height: 30px;
+    background-image: linear-gradient(145deg, #9a8c98, #22223b 15%);
+    border-left: 5px solid #9a8c98;
+    box-shadow: -5px 5px 20px #9a8c98;
+    color: #9a8c98;
+    padding: 5px 10px 5px 40px;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+form .results > div:first-child {
+    margin-top: 30px;
+}
+form .results > div:not(:last-child) {
+    margin-bottom: 15px;
+}
+form .results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+form .results > div button {
+    color: white;
+    overflow: hidden;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(231, 0, 0);
+    border: none;
+    font-weight: 800;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+form .results > div button:hover {
+    background-color: rgb(136, 2, 2);
+}
+.contact {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0px;
+}
+.contact a {
+    text-decoration: none;
+    color: #22223b;
+    padding: 5px;
+}
+p {
+    font-weight: 600;
+    color: #9a8c98;
+}
